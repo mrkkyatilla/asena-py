@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wolf Line Animation</title>
+  <style>
+    body {
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    svg {
+      width: 300px;
+      height: auto;
+      stroke: white;
+      fill: none;
+      stroke-width: 1.5;
+      stroke-dasharray: 3000;
+      stroke-dashoffset: 3000;
+      animation: draw 4s ease-in-out forwards;
+    }
+
+    @keyframes draw {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Vektörel kurt çizimi (çizgi siluet) -->
+  <svg viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+    <path d="M700,300 
+      C730,280 750,250 740,220 
+      C760,230 780,270 780,300 
+      C800,310 820,340 810,370 
+      C830,390 860,420 850,450 
+      C870,460 880,500 860,520 
+      C880,540 880,580 850,590 
+      C830,600 810,610 800,630 
+      C780,640 760,670 740,680 
+      C720,700 700,710 690,730 
+      C670,740 650,750 630,740 
+      C610,730 590,720 570,700 
+      C550,690 540,670 530,650 
+      C510,630 500,600 490,580 
+      C480,560 470,530 470,510 
+      C470,490 480,460 490,440 
+      C500,420 510,390 530,370 
+      C550,350 570,340 590,330 
+      C610,320 640,310 670,310 
+      C680,310 690,310 700,300 Z"/>
+  </svg>
+
+</body>
+</html>

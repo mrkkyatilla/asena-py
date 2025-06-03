@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kurt Logo Stroke Animasyonu</title>
+  <style>
+    body {
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    svg {
+      width: 300px;
+      height: auto;
+    }
+
+    path {
+      stroke: white;
+      stroke-width: 2;
+      fill: none;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: draw 3s ease-out forwards, fillin 1s ease-in forwards;
+      animation-delay: 0s, 3s; /* fillin animasyonu çizimden sonra başlar */
+    }
+
+    @keyframes draw {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @keyframes fillin {
+      to {
+        fill: white;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Logonu buraya gömüyorum -->
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="600.000000pt" height="600.000000pt" viewBox="0 0 600.000000 600.000000"
+ preserveAspectRatio="xMidYMid meet">
+  <g transform="translate(0.000000,600.000000) scale(0.100000,-0.100000)">
+    <path d="M2850 5989 c-580 -37 -1143 -238 -1620 -576 -179 -127 -310 -238
+    -480 -408 -281 -281 -468 -543 -631 -882 -304 -617 -389 -1354 -235 -2043 44
+    -198 143 -474 235 -646 249 -468 615 -883 1030 -1174 625 -428 1404 -606 2161
+    -502 1163 157 2103 964 2419 2097 67 240 106 460 126 709 56 713 -133 1440
+    -534 2032 -310 452 -763 850 -1251 1110 -431 226 -892 345 -1360 353 -93 2
+    -186 2 -205 0z"/>
+  </g>
+</svg>
+
+</body>
+</html>
